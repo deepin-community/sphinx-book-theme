@@ -1,0 +1,36 @@
+Source: sphinx-book-theme
+Section: python
+Priority: optional
+Maintainer: Sandro Tosi <morph@debian.org>
+Uploaders: Debian Python Team <team+python@tracker.debian.org>,
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-bs4 <!nocheck>,
+               python3-docutils <!nocheck>,
+               python3-setuptools,
+               python3-sphinx <!nocheck>,
+Standards-Version: 4.6.0.1
+Testsuite: autopkgtest-pkg-python
+Homepage: https://jupyterbook.org/
+Vcs-Git: https://salsa.debian.org/python-team/packages/sphinx-book-theme.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/sphinx-book-theme
+
+Package: python3-sphinx-book-theme
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+Recommends: ${python3:Recommends},
+Suggests: ${python3:Suggests},
+Description: clean book theme for scientific explanations and documentation with Sphinx
+ This is a lightweight Sphinx theme designed to mimic the look-and-feel of an
+ interactive book. It has the following primary features:
+ .
+  * Bootstrap 4 for visual elements and functionality
+  * Flexible content layout that is inspired by beautiful online books, such as
+    the Edward Tufte CSS guide
+  * Visual classes designed for Jupyter Notebooks. Cell inputs, outputs, and
+    interactive functionality are all supported
+  * Launch buttons for online interactivity. For pages that are built with
+    computational material, connect your site to an online BinderHub for
+  * interactive content
