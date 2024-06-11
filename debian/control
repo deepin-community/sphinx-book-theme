@@ -1,8 +1,7 @@
 Source: sphinx-book-theme
 Section: python
 Priority: optional
-Maintainer: Sandro Tosi <morph@debian.org>
-Uploaders: Debian Python Team <team+python@tracker.debian.org>,
+Maintainer: Debian Python Team <team+python@tracker.debian.org>,
 Build-Depends: debhelper-compat (= 13),
                dh-python,
                python3-all,
