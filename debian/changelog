@@ -1,3 +1,16 @@
+sphinx-book-theme (0.1.7-3) unstable; urgency=medium
+
+  * orphan
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 28 Feb 2024 23:57:19 -0500
+
+sphinx-book-theme (0.1.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add a patch to stop adding digest to CSS file name.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 08 Nov 2023 10:01:01 +0300
+
 sphinx-book-theme (0.1.7-1) unstable; urgency=medium
 
   * New upstream release

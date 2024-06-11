@@ -1,0 +1,37 @@
+From: Dmitry Shachnev <mitya57@debian.org>
+Date: Wed, 8 Nov 2023 00:42:56 +0300
+Subject: Remove digest from the stylesheet path
+
+Sphinx 7.1+ now generates checksums itself, and it raises ThemeError
+when a local asset file contains a query string.
+---
+ sphinx_book_theme/theme.conf | 2 +-
+ src/jinja/theme.conf.j2      | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/sphinx_book_theme/theme.conf b/sphinx_book_theme/theme.conf
+index acb7d3c..f62d4c8 100644
+--- a/sphinx_book_theme/theme.conf
++++ b/sphinx_book_theme/theme.conf
+@@ -3,7 +3,7 @@
+ inherit = pydata_sphinx_theme
+ pygments_style = tango
+ sidebars = sidebar-logo.html, search-field.html, sbt-sidebar-nav.html, sbt-sidebar-footer.html
+-stylesheet = sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309
++stylesheet = sphinx-book-theme.css
+ 
+ [options]
+ single_page = False
+diff --git a/src/jinja/theme.conf.j2 b/src/jinja/theme.conf.j2
+index 9fd1350..a9a53f8 100644
+--- a/src/jinja/theme.conf.j2
++++ b/src/jinja/theme.conf.j2
+@@ -3,7 +3,7 @@
+ inherit = pydata_sphinx_theme
+ pygments_style = tango
+ sidebars = sidebar-logo.html, search-field.html, sbt-sidebar-nav.html, sbt-sidebar-footer.html
+-stylesheet = {{ "src/scss/sphinx-book-theme.scss" | compiled_name }}?digest={{ "src/scss/sphinx-book-theme.scss" | hash }}
++stylesheet = {{ "src/scss/sphinx-book-theme.scss" | compiled_name }}
+ 
+ [options]
+ single_page = False
